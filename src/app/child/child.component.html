@@ -1,2 +1,14 @@
 <h1 class="text-danger">Child</h1>
 <p>My name is <b>{{objData.name}} {{objData.surname}}</b></p>
+
+
+<table class="table table-bordered text-center">
+    <thead>
+        <th>Name</th>
+        <th>Surname</th>
+    </thead>
+    <tbody *ngFor="let list of listArr">
+        <td>{{list.name}}</td>
+        <td>{{list.surname}}</td>
+    </tbody>
+</table>

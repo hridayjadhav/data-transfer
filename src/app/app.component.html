@@ -8,7 +8,11 @@
     <div class="mb-3">
       <input #surname type="text" class="form-control">
     </div>
-    <button type="button" (click)="TransferData(name.value, surname.value)" class="btn btn-primary">Submit</button>
+    <div>
+      <button type="button" (click)="TransferData(name.value, surname.value)" class="btn btn-primary">Submit</button>
+    </div>
+    <span>{{response}}</span>
+    
   </form>
   <div class="col-4">
     <app-child [nameData]="inputName" [surnameData]="inputName2" [objData]="inputObj"></app-child>
