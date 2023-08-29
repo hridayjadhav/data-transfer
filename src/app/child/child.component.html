@@ -12,3 +12,6 @@
         <td>{{list.surname}}</td>
     </tbody>
 </table>
+
+<input #name type="text" class="form-control mt-5">     <!--Here we will change the H1 tag ( on click of child we will change in parent)-->
+<button type="submit" class="btn btn-primary mt-3" (click)="dataupdateevent.emit(name.value)">Click</button>

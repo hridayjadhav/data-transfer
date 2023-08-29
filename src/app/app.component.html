@@ -1,7 +1,7 @@
 <section class="container-fluid d-flex justify-content-evenly mt-5">
   
   <form class="col-4">
-    <h1 class="text-danger">Parent</h1>
+    <h1 class="text-danger">{{ parentTitle }}</h1>
     <div class="mb-3">
       <input #name type="text" class="form-control">
     </div>
@@ -15,7 +15,7 @@
     
   </form>
   <div class="col-4">
-    <app-child [nameData]="inputName" [surnameData]="inputName2" [objData]="inputObj"></app-child>
+    <app-child [nameData]="inputName" [surnameData]="inputName2" [objData]="inputObj" (dataupdateevent)="updateTitle($event)"></app-child>
   </div>
 </section>
 

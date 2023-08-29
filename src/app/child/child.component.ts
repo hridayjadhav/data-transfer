@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -11,6 +11,9 @@ export class ChildComponent {
   @Input() surnameData : any;
   @Input() objData : any;
 
+  @Output() dataupdateevent = new EventEmitter<string>();     //we define this to use output-decorator. child to parent data transfer.
+  
+
   constructor(){}
 
   
@@ -21,6 +24,8 @@ export class ChildComponent {
     this.listArr.push(obj);
     return obj.name + " is added.";
   }
+
+
 
 
 

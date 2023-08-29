@@ -8,7 +8,7 @@ import { ChildComponent } from './child/child.component';
 })
 export class AppComponent {
   @ViewChild(ChildComponent) viewData ! : ChildComponent     //using viewchild() decorator
-  title = 'data-transfer';
+  title = 'Parent';
   inputName = '';
   inputName2 = '';
   inputObj = {"name":'', "surname":''};
@@ -19,5 +19,15 @@ export class AppComponent {
     this.inputName2 = surname;   //here we can put 2 or more files too.
     this.inputObj = {"name":name, "surname":surname};   //here we can use both things in one.
     this.response = this.viewData.updateList(this.inputObj);
+
+
   }
+
+  parentTitle: string = 'Parent';
+
+  updateTitle(title:any){    //lets bind it in app.html
+    this.parentTitle = title;
+  }
+
 }
+
